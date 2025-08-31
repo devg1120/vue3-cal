@@ -1,12 +1,15 @@
 <script setup>
 
 import  Case01 from './case/Case01.vue';
+import  Case_OverlappingEvents from './case/Case_OverlappingEvents.vue';
+
 
 </script>
 
 <template>
 
 <Case01 />
+<Case_OverlappingEvents />
 
 <!--
 <VueCal
