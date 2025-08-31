@@ -42,7 +42,7 @@
     "ui"
   ],
   "scripts": {
-    "dev": "vite --host --port 3000",
+    "dev": "vite --host --port 4000",
     "build": "vite build --base /vue-cal/",
     "build-bundle": "BUNDLE=true vite build",
     "preview": "vite preview --base /vue-cal/",
