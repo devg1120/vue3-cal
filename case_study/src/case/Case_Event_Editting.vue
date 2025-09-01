@@ -14,7 +14,7 @@ import '@mdi/font/css/materialdesignicons.min.css'
 const showDialog = ref(false)
 const selectedEvent = ref(null)
 
-let title = "Overlapping Events";
+let title = "Editting Events";
 let code_block = `
 <vue-cal
   editable-events

@@ -2,14 +2,17 @@
 
 import  Case01 from './case/Case01.vue';
 import  Case_OverlappingEvents from './case/Case_OverlappingEvents.vue';
+import  Case_Event_Editting  from'./case/Case_Event_Editting.vue';
 
 
 </script>
 
 <template>
 
-<Case01 />
 
+<Case_Event_Editting />
+
+<Case01 />
 
 <Case_OverlappingEvents />
 

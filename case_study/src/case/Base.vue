@@ -4,6 +4,7 @@ import 'vue-code-highlighter/dist/style.css'
 import { VMarkdownView } from 'vue3-markdown'
 import 'vue3-markdown/dist/vue3-markdown.css'
 
+
 interface Props {
     title: String,
     code_block: String,
@@ -50,12 +51,4 @@ pre {
   text-align: start;
 }
 */
-slot.vuecal__event {color: #fff;border: 1px solid;}
-slot.vuecal__event.leisure {background-color: #fd9c42d9;}
-slot.vuecal__event.health {background-color: #57cea9cc;}
-slot.vuecal__event.sport {background-color: #ff6666d9;}
-slot.vuecal__event.lunch {
-  background-color: repeating-linear-gradient(45deg, transparent 0 10px, #ffffff11 10px 20px);
-  border: none;
-}
 </style>
