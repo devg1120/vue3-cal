@@ -418,32 +418,38 @@ const openDialog = ({ event }) => {
 <w-dialog
   v-if=" selectedEvent"
   v-model="showDialog"
-  :title="selectedEvent.title"
-  width="300">
-  <w-flex align-center justify-end gap2>
-    <w-icon class="grey">mdi mdi-calendar</w-icon>
-    <!--
-    <small>{{ selectedEvent.start.format() }}</small>
-    -->
-    <small>{{ fmt_yyyymmdd(selectedEvent.start) }}</small>
-    <w-icon class="grey ml2">mdi mdi-clock-outline</w-icon>
-    <!--
-    <small>
-      {{ selectedEvent.start.formatTime() }}
-      - {{ selectedEvent.end.formatTime() }}
-    </small>
-    -->
-    <small>
-      {{ fmt_hhmm(selectedEvent.start) }}
-      - {{ fmt_hhmm(selectedEvent.end) }}
-    </small>
-    
+  title="EVENT EDIT"
+  width="400">
+
+  <w-input :model-value="selectedEvent.title" >title</w-input>
+
+  <w-flex align-center justify-end gap2 class="mt4 ">
+    <div class="box xs6">
+      <w-flex>
+        <w-icon class="grey pa4">mdi mdi-calendar</w-icon>
+        <w-input maxlength="10" :model-value="fmt_yyyymmdd(selectedEvent.start)" >yyyy-mm-dd</w-input>
+      </w-flex>
+    </div>
+    <div class="box xs6">
+      <w-flex>
+        <w-icon class="grey pa4">mdi mdi-clock-outline</w-icon>
+        <w-input maxlength="5" :model-value="fmt_hhmm(selectedEvent.start)" >hh:mm</w-input>
+        <pre>  ～  </pre>
+        <w-input maxlength ="5" width="10px" :model-value="fmt_hhmm(selectedEvent.end)" >hh:mm</w-input>
+      </w-flex>
+    </div>
   </w-flex>
   <w-flex
     class="align-center justify-center title1 mt6 mb4"
     v-html="selectedEvent.content">
   </w-flex>
-  <p>{{ selectedEvent.contentFull }}</p>
+  <w-textarea
+  :model-value="selectedEvent.contentFull"
+  label="contentFull"
+  outline 
+  >
+  </w-textarea>
+
 </w-dialog>
 <!------------------------------------->
 </template>

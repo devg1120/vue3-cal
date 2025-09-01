@@ -422,17 +422,8 @@ const openDialog = ({ event }) => {
   width="300">
   <w-flex align-center justify-end gap2>
     <w-icon class="grey">mdi mdi-calendar</w-icon>
-    <!--
-    <small>{{ selectedEvent.start.format() }}</small>
-    -->
     <small>{{ fmt_yyyymmdd(selectedEvent.start) }}</small>
     <w-icon class="grey ml2">mdi mdi-clock-outline</w-icon>
-    <!--
-    <small>
-      {{ selectedEvent.start.formatTime() }}
-      - {{ selectedEvent.end.formatTime() }}
-    </small>
-    -->
     <small>
       {{ fmt_hhmm(selectedEvent.start) }}
       - {{ fmt_hhmm(selectedEvent.end) }}
