@@ -16,13 +16,27 @@ let code_block = `
   :special-hours="specialHours"
 />
 `;
+
+//let md_mode = 'light';
+let md_mode = 'dark';
+let md_content = `
+
+## One of the world's most
+
+- aaaa
+- bbbb
+- cccc
+
+`;
 /*************************************/
 
 </script>
 
 <template>
-<Base :title :code_block>
+<Base :title :code_block :md_mode :md_content>
+
 <template v-slot:contents>
+
 <!------------------------------------->
    <VueCal 
       :views="['day', 'week']"
@@ -31,19 +45,7 @@ let code_block = `
       :special-hours="specialHours"
    />
 <!------------------------------------->
-</template>
 
-<template v-slot:desc>
-<!------------------------------------->
-   <p>DESCRIPTION</p>
-   <ul>
-     <li>Neil Armstrong</li>
-     <li>Alan Bean</li>
-     <li>Peter Conrad</li>
-     <li>Edgar Mitchell</li>
-     <li>Alan Shepard</li>
-   </ul>
-<!------------------------------------->
 </template>
 
 </Base>
